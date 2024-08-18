@@ -17,7 +17,9 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [x] Created a navigation bar at the top to quickly navigate to specific sections of the page
+* [ ] Overhaul game card to display more information (like total amount raised and the goal)
+* [ ] Create a search bar to search for a specific game
 
 ## Video Walkthrough
 
