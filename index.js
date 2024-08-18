@@ -173,7 +173,7 @@ const unfunded_games = GAMES_JSON.reduce((acc, game) => {
 const displayStr = `Currently a total of $${total_raised.toLocaleString('en-US')} has been raised for ${total_games} games. Right now ${unfunded_games} ${unfunded_games == 1 ? 'game' : 'games' } remain unfunded. We need your help to fund ${unfunded_games == 1 ? 'this amazing game!' : 'these amazing games!' } `;
 
 // create a new DOM element containing the template string and append it to the description container
-let displayStrDiv = document.createElement('div');
+let displayStrDiv = document.createElement('p');
 displayStrDiv.textContent = displayStr;
 descriptionContainer.append(displayStrDiv);
 
@@ -190,7 +190,14 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
+const [firstGame, secondGame, ...rest] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+let topPledgeDiv = document.createElement('p');
+topPledgeDiv.textContent = `${firstGame.name}`;
+firstGameContainer.append(topPledgeDiv);
 
 // do the same for the runner up item
+let runnerUpDiv = document.createElement('p');
+runnerUpDiv.textContent = `${secondGame.name}`;
+secondGameContainer.append(runnerUpDiv);
