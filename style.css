@@ -1,22 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 body {
     font-family: 'Cabin';
     background-color: #758190;
 }
 
 #tentacles {
-    width: 50px;
+    width: 40px;
+}
+
+.header-container {
+    display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    align-self: flex-start;
+    align-items: center;
+    top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: lightblue;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    padding: 0px 1%;
 }
 
 .header {
     display: flex;
-    background-color: lightblue;
-    padding: 1%;
+    flex-direction: row;
     align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -10px;
+    position: inherit;
+}
+
+.header-text {
+    padding: 0;
+}
+
+.navbar-container {
+    position: inherit;
+}
+
+.navbar {
+    list-style: none;
+}
+
+.navbar-link {
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 8px
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+    color: black;
+}
+
+.navbar-link:hover {
+    background-color: aliceblue;
+    color: #B4DCFF;
+}
+
+.navbar-link:focus {
+    color: #58B0FE;
+}
+
+.navbar-item {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 1.1rem;
 }
 
 .stats-container {
@@ -36,6 +98,20 @@ body {
     margin: 1%;
     width: 100%;
     text-align: center;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
+}
+
+#stats-anchor {
+    top: -75px;
+}
+
+#games-anchor {
+    top: -255px;
 }
 
 #num-contributions, #total-raised, #num-games {

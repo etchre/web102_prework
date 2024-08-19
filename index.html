@@ -8,11 +8,23 @@
 
   <body>
     <!-- header row with logo -->
-    <div class="header">
-        <img id="tentacles" src="assets/tentacles.png">
-        <h1 class="header-text">Sea Monster Crowdfunding</h1>
+    <div class="header-container">
+        <div class="header">
+            <img id="tentacles" src="assets/tentacles.png">
+            <h2 class="header-text">Sea Monster Crowdfunding</h1>
+        </div>
+        <div class="navbar-container">
+            <ul class="navbar">
+                <li class="navbar-item">
+                    <a class="navbar-link" href="#stats-anchor">Stats</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="#games-anchor">Our Games</a>
+                </li>
+            </ul>
+        </div>
     </div>
-
+    
     <!-- background info about company -->
     <h2>Welcome to Sea Monster!</h2>
     <div id="description-container">
@@ -20,6 +32,7 @@
     </div>
 
     <!-- top games & other interesting stats -->
+    <a class="anchor" id="stats-anchor"></a>
     <h2>Stats</h2>
     <div class="stats-container">
         <div class="stats-card">
@@ -55,6 +68,7 @@
         <button id="funded-btn">Show Funded Only</button>
         <button id="all-btn">Show All Games</button>
     </div>
+    <a class="anchor" id="games-anchor"></a>
     <div id="games-container">
 
     </div>
