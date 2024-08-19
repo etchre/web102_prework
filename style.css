@@ -32,7 +32,7 @@ body {
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
-    padding: 0px 1%;
+    padding: 3px 10px;
 }
 
 .header {
@@ -44,14 +44,19 @@ body {
 
 .header-text {
     padding: 0;
+    margin: auto;
 }
 
 .navbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     position: inherit;
 }
 
 .navbar {
     list-style: none;
+    padding: 0;
 }
 
 .navbar-link {
@@ -68,7 +73,7 @@ body {
 
 .navbar-link:hover {
     background-color: aliceblue;
-    color: #B4DCFF;
+    color: #bfe0fd;
 }
 
 .navbar-link:focus {
@@ -77,9 +82,31 @@ body {
 
 .navbar-item {
     display: inline-block;
-    margin-right: 5px;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
+
+.search-container {
+    margin-right: 6px;
+}
+
+.search-bar {
+    margin: auto;
+    visibility: visible;
+    padding: 2px;
+}
+
+.search-bar:hover {
+    color: inherit;
+}
+
+.search-bar:focus {
+    color: inherit;
+}
+
+.search-icon {
+   
+}
+
 
 .stats-container {
     display: flex;
@@ -107,11 +134,11 @@ a.anchor {
 }
 
 #stats-anchor {
-    top: -75px;
+    top: -4.1rem;
 }
 
 #games-anchor {
-    top: -255px;
+    top: -15.1rem;
 }
 
 #num-contributions, #total-raised, #num-games {
@@ -149,8 +176,11 @@ a.anchor {
 }
 
 button {
-    font-family: 'Cabin';
     border: none;
+}
+
+.sort-button {
+    font-family: 'Cabin';
     padding: 1%;
     margin: 1%;
     border-radius: 7px;

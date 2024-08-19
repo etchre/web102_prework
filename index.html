@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/ed198af7bc.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -14,6 +15,12 @@
             <h2 class="header-text">Sea Monster Crowdfunding</h1>
         </div>
         <div class="navbar-container">
+            <div class="search-container">
+                <form>
+                    <input type="search" placeholder="search for a game..." class="navbar-link search-bar"></input>
+                    <button type="submit" class="fa-solid fa-magnifying-glass search-icon navbar-link"></i>
+                </form>
+            </div>
             <ul class="navbar">
                 <li class="navbar-item">
                     <a class="navbar-link" href="#stats-anchor">Stats</a>
@@ -64,9 +71,9 @@
     <h2>Our Games</h2>
     <p>Check out each of our games below!</p>
     <div id="button-container">
-        <button id="unfunded-btn">Show Unfunded Only</button>
-        <button id="funded-btn">Show Funded Only</button>
-        <button id="all-btn">Show All Games</button>
+        <button class="sort-button" id="unfunded-btn">Show Unfunded Only</button>
+        <button class="sort-button" id="funded-btn">Show Funded Only</button>
+        <button class="sort-button" id="all-btn">Show All Games</button>
     </div>
     <a class="anchor" id="games-anchor"></a>
     <div id="games-container">
