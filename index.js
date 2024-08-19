@@ -126,6 +126,45 @@ function filterFundedOnly() {
     addGamesToPage(filtered_list);
 }
 
+// shows only games that match the string
+// meant for use with the search bar
+function filterByName(name) {
+    deleteChildElements(gamesContainer);
+
+    let filtered_list = GAMES_JSON.filter((game) => {
+        if(game.name.toLowerCase().includes(name.toLowerCase())) {
+            return true;
+        }
+        return false;
+    });
+
+    addGamesToPage(filtered_list);
+}
+
+// the on press search function for the search bar
+function searchBar() {
+    let input = document.getElementById('search-bar').value;
+
+    filterByName(input);
+}
+
+const searchBtn = document.getElementById('search-button');
+searchBtn.addEventListener(
+    'click',
+    searchBar
+);
+
+const searchInput = document.getElementById('search-bar');
+searchInput.addEventListener(
+    'keydown',
+    (event) => {
+        if(event.code === 'Enter') {
+            event.preventDefault();
+            searchBar();
+        }
+    }
+);
+
 // show all games
 function showAllGames() {
     deleteChildElements(gamesContainer);

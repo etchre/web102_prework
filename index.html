@@ -17,8 +17,19 @@
         <div class="navbar-container">
             <div class="search-container">
                 <form>
-                    <input type="search" placeholder="search for a game..." class="navbar-link search-bar"></input>
-                    <button type="submit" class="fa-solid fa-magnifying-glass search-icon navbar-link"></i>
+                    <input 
+                        type="search" 
+                        placeholder="search for a game..." 
+                        id="search-bar" 
+                        class="navbar-link search-bar"
+                    >
+                    </input>
+                    <button 
+                        type="button" 
+                        class="fa-solid fa-magnifying-glass search-icon navbar-link"
+                        id="search-button"
+                    >
+                    </button>
                 </form>
             </div>
             <ul class="navbar">
@@ -69,13 +80,13 @@
 
     <!-- list of games funded by Sea Monster -->
     <h2>Our Games</h2>
+    <a class="anchor" id="games-anchor"></a>
     <p>Check out each of our games below!</p>
     <div id="button-container">
         <button class="sort-button" id="unfunded-btn">Show Unfunded Only</button>
         <button class="sort-button" id="funded-btn">Show Funded Only</button>
         <button class="sort-button" id="all-btn">Show All Games</button>
     </div>
-    <a class="anchor" id="games-anchor"></a>
     <div id="games-container">
 
     </div>
