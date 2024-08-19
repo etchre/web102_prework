@@ -141,11 +141,18 @@ function filterByName(name) {
     addGamesToPage(filtered_list);
 }
 
+const games_anchor = document.getElementById('games-anchor');
 // the on press search function for the search bar
 function searchBar() {
     let input = document.getElementById('search-bar').value;
 
-    filterByName(input);
+    //only do anything if there is any input
+    if(input.length >= 1) {
+        filterByName(input);
+
+        //scroll down to the games section to show the searched for games
+        games_anchor.scrollIntoView();
+    }
 }
 
 const searchBtn = document.getElementById('search-button');
@@ -154,6 +161,7 @@ searchBtn.addEventListener(
     searchBar
 );
 
+//allows the enter key to be used to submit search query
 const searchInput = document.getElementById('search-bar');
 searchInput.addEventListener(
     'keydown',
@@ -227,6 +235,8 @@ const secondGameContainer = document.getElementById("second-game");
 const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
     return item2.pledged - item1.pledged;
 });
+
+showAllGames();
 
 // use destructuring and the spread operator to grab the first and second games
 const [firstGame, secondGame, ...rest] = sortedGames;

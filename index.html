@@ -28,6 +28,7 @@
                         type="button" 
                         class="fa-solid fa-magnifying-glass search-icon navbar-link"
                         id="search-button"
+                        onclick="this.blur()"
                     >
                     </button>
                 </form>
@@ -87,9 +88,14 @@
         <button class="sort-button" id="funded-btn">Show Funded Only</button>
         <button class="sort-button" id="all-btn">Show All Games</button>
     </div>
-    <div id="games-container">
+    <div id="games-section">
+        <div id="games-container">
 
+        </div>
+        <div id="padding-container">
+        </div>
     </div>
+    
 
     <script type="module" src="index.js"></script>
   </body>
