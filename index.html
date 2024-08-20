@@ -9,90 +9,96 @@
 
   <body>
     <!-- header row with logo -->
-    <div class="header-container">
-        <div class="header">
-            <img id="tentacles" src="assets/tentacles.png">
-            <h2 class="header-text">Sea Monster Crowdfunding</h1>
-        </div>
-        <div class="navbar-container">
-            <div class="search-container">
-                <form>
-                    <input 
-                        type="search" 
-                        placeholder="search for a game..." 
-                        id="search-bar" 
-                        class="navbar-link search-bar"
-                    >
-                    </input>
-                    <button 
-                        type="button" 
-                        class="fa-solid fa-magnifying-glass search-icon navbar-link"
-                        id="search-button"
-                        onclick="this.blur()"
-                    >
-                    </button>
-                </form>
+    <div class="header-root-container">
+        <div class="header-adjusting-container">
+            <div class="header">
+                <img id="tentacles" src="assets/tentacles.png">
+                <h2 class="header-text">Sea Monster Crowdfunding</h1>
             </div>
-            <ul class="navbar">
-                <li class="navbar-item">
-                    <a class="navbar-link" href="#stats-anchor">Stats</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="#games-anchor">Our Games</a>
-                </li>
-            </ul>
+            <div class="navbar-container">
+                <div class="search-container">
+                    <form>
+                        <input 
+                            type="search" 
+                            placeholder="search for a game..." 
+                            id="search-bar" 
+                            class="navbar-link search-bar"
+                        >
+                        </input>
+                        <button 
+                            type="button" 
+                            class="fa-solid fa-magnifying-glass search-icon navbar-link"
+                            id="search-button"
+                            onclick="this.blur()"
+                        >
+                        </button>
+                    </form>
+                </div>
+                <ul class="navbar">
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="#stats-anchor">Stats</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="#games-anchor">Our Games</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     
-    <!-- background info about company -->
-    <h2>Welcome to Sea Monster!</h2>
-    <div id="description-container">
-        <p>The purpose of our company is to fund independent games. We've been in operation for 12 years.</p>
-    </div>
-
-    <!-- top games & other interesting stats -->
-    <a class="anchor" id="stats-anchor"></a>
-    <h2>Stats</h2>
-    <div class="stats-container">
-        <div class="stats-card">
-            <h3>Individual Contributions</h3>
-            <p id="num-contributions">
-            </p>
-        </div>
-        <div class="stats-card">
-            <h3>Total Raised</h3>
-            <p id="total-raised">
-            </p>
-        </div>
-        <div class="stats-card">
-            <h3>Total Number of Games</h3>
-            <p id="num-games">
-            </p>
-        </div>
-    </div>
-    <div class="stats-container" id="top-games">
-        <div class="stats-card" id="first-game">
-            <h3>🥇 Top Funded Game</h3>
-        </div>
-        <div class="stats-card" id="second-game">
-            <h3>🥈 Runner Up</h3>
-        </div>
-    </div>
-
-    <!-- list of games funded by Sea Monster -->
-    <h2>Our Games</h2>
-    <a class="anchor" id="games-anchor"></a>
-    <p>Check out each of our games below!</p>
-    <div id="button-container">
-        <button class="sort-button" id="unfunded-btn">Show Unfunded Only</button>
-        <button class="sort-button" id="funded-btn">Show Funded Only</button>
-        <button class="sort-button" id="all-btn">Show All Games</button>
-    </div>
-    <div id="games-section">
-        <div id="games-container">
-
-        </div>
-        <div id="padding-container">
+    <div class="content-root-container">
+        <div class="content-adjusting-container">
+            <!-- background info about company -->
+            <h2>Welcome to Sea Monster!</h2>
+            <div id="description-container">
+                <p>The purpose of our company is to fund independent games. We've been in operation for 12 years.</p>
+            </div>
+    
+            <!-- top games & other interesting stats -->
+            <a class="anchor" id="stats-anchor"></a>
+            <h2>Stats</h2>
+            <div class="stats-container">
+                <div class="stats-card">
+                    <h3>Individual Contributions</h3>
+                    <p id="num-contributions">
+                    </p>
+                </div>
+                <div class="stats-card">
+                    <h3>Total Raised</h3>
+                    <p id="total-raised">
+                    </p>
+                </div>
+                <div class="stats-card">
+                    <h3>Total Number of Games</h3>
+                    <p id="num-games">
+                    </p>
+                </div>
+            </div>
+            <div class="stats-container" id="top-games">
+                <div class="stats-card" id="first-game">
+                    <h3>🥇 Top Funded Game</h3>
+                </div>
+                <div class="stats-card" id="second-game">
+                    <h3>🥈 Runner Up</h3>
+                </div>
+            </div>
+    
+            <!-- list of games funded by Sea Monster -->
+            <h2>Our Games</h2>
+            <a class="anchor" id="games-anchor"></a>
+            <p>Check out each of our games below!</p>
+            <div id="button-container">
+                <button class="sort-button" id="unfunded-btn">Show Unfunded Only</button>
+                <button class="sort-button" id="funded-btn">Show Funded Only</button>
+                <button class="sort-button" id="all-btn">Show All Games</button>
+            </div>
+            <div id="games-section">
+                <div id="games-container">
+    
+                </div>
+                <div id="padding-container">
+                </div>
+            </div>
         </div>
     </div>
     
