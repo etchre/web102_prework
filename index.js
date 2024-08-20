@@ -41,19 +41,44 @@ function addGamesToPage(games) {
         // about each game
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
-        newDiv.innerHTML = `<p>${game.name}</p>`;
-        newDiv.innerHTML += `<img src=${game.img} class='game-img'/>`;
-        newDiv.innerHTML += `<p>${game.description}</p>`;
+        newDiv.innerHTML = `
+            <div>
+                <img src=${game.img} class='game-img'/>
+            </div>
+        `;
+        newDiv.innerHTML += `
+            <div class='game-card-text'>
+                <p class='game-card-title'>${game.name}</p>
+                <p class='game-card-desc'>${game.description}</p>
+            </div>
+        `;
 
         // append the game to the games-container
         gamesContainer.append(newDiv);
+
+        //calculate length of pledge progress bar
+        let pledge_progress = (game.pledged / game.goal) * 100;
+        pledge_progress = pledge_progress >= 100 ? 100: pledge_progress;
+
+        newDiv.innerHTML += `
+            <div class='game-card-money-spread'>
+                <div class='money-spread-outline'>
+                </div>
+                <div 
+                    class='money-spread-bar' 
+                    style='
+                        width: ${pledge_progress}%;
+                    '
+                >
+                </div>
+            </div>
+        `
     });
 }
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
 addGamesToPage(GAMES_JSON);
-
 
 /*************************************************************************************
  * Challenge 4: Create the summary statistics at the top of the page displaying the
