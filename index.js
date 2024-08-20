@@ -57,8 +57,14 @@ function addGamesToPage(games) {
         gamesContainer.append(newDiv);
 
         //calculate length of pledge progress bar
-        let pledge_progress = (game.pledged / game.goal) * 100;
+        let pledge_progress = (game.pledged / game.goal);
+        let pledge_progress_uncapped = pledge_progress;
+        let pledge_progress_atleast1 = pledge_progress;
+        pledge_progress *= 100;
         pledge_progress = pledge_progress >= 100 ? 100: pledge_progress;
+        pledge_progress_atleast1 = pledge_progress_atleast1 <= 1 ? 0 : pledge_progress_atleast1;
+
+        let font_size = (2 + (pledge_progress_atleast1/8))
 
         newDiv.innerHTML += `
             <div class='game-card-money-spread'>
@@ -70,6 +76,16 @@ function addGamesToPage(games) {
                         width: ${pledge_progress}%;
                     '
                 >
+                </div>
+                <div class='money-spread-stats'>
+                    <div class='money-percent-container'>
+                        <p class='money-stats-percent'>
+                            ${Math.round(pledge_progress_uncapped*100)}%
+                        </p>
+                        <p class='money-percent-flavor'>
+                            of goal reached
+                        </p>
+                    </div>
                 </div>
             </div>
         `

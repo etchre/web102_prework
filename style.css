@@ -31,7 +31,7 @@ min widths
 
 /* screen breakpoints */
 /* sm */
-
+/*
 @media (min-width: 640px) {
     .header-adjusting-container {
         min-width: 640px;
@@ -188,7 +188,7 @@ input[type="search"] {
 
 .search-bar {
     margin: auto;
-    visibility: visible;
+    visibility: hidden;
     padding: 6.8px;
     border: 0;
     outline: 0;
@@ -210,6 +210,7 @@ input[type="search"] {
 
 form:hover input {
     width: 11rem;
+    visibility: visible;
 }
 
 form:hover button {
@@ -329,10 +330,11 @@ a.anchor {
 
 .game-card-money-spread {
     grid-area: money;
+    margin: 5px;
+
 }
 
 .money-spread-outline {
-    margin: 5px;
     position: relative;
     height: 25px;
     background-color: rgb(240, 236, 236);
@@ -341,14 +343,44 @@ a.anchor {
 }
 
 .money-spread-bar {
-    margin: 5px;
+    box-sizing: border-box;
     position: relative;
-    top: -30px;
+    top: -25px;
     height: 25px;
     background-color: lightgreen;
     z-index: 0;
     border-radius: 10px;
 }
+
+
+
+.money-spread-stats {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    top: -45px;
+}
+
+.money-percent-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.money-stats-percent {
+    margin: 0;
+    position: relative;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.money-percent-flavor {
+    margin: 0;
+    position: relative;
+    font-weight: 300;
+    margin-left: 5px;
+    top: 20px
+}
+
 
 .game-card:hover {
     cursor: pointer;
