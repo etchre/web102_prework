@@ -63,8 +63,17 @@ function addGamesToPage(games) {
         pledge_progress *= 100;
         pledge_progress = pledge_progress >= 100 ? 100: pledge_progress;
         pledge_progress_atleast1 = pledge_progress_atleast1 <= 1 ? 0 : pledge_progress_atleast1;
+        let pledge_uncapped_rounded = Math.round(pledge_progress_uncapped*100);
 
         let font_size = (2 + (pledge_progress_atleast1/8))
+
+        let goal_text = 'met!';
+
+        if(pledge_uncapped_rounded >= 200) {
+            goal_text = 'crushed!';
+        } else if(pledge_uncapped_rounded >= 110) {
+            goal_text = 'exceeded!';
+        }
 
         newDiv.innerHTML += `
             <div class='game-card-money-spread'>
@@ -82,9 +91,33 @@ function addGamesToPage(games) {
                         <p class='money-stats-percent'>
                             ${Math.round(pledge_progress_uncapped*100)}%
                         </p>
-                        <p class='money-percent-flavor'>
-                            of goal reached
-                        </p>
+                        <div class='money-percent-flavor-container'>
+                            <p class='money-percent-flavor'>
+                                of goal reached
+                            </p>
+                            <div class='backers-display'>
+                                <i class="fa-solid fa-user"></i>
+                                 ${game.backers} backers
+                            </div>
+                        </div>
+                    </div>
+                    <div class='money-display-container'>
+                        <div class='money-display'>
+                            <span class='money-large'>$${game.pledged}</span>
+                            <span class='money-small'> / $${game.goal}</span>
+                        </div>
+                        <div
+                            class='percent-goal-text' 
+                            style='visibility: ${pledge_progress >= 100 ? 'visible' : 'hidden'}'
+                        >
+                            Goal ${goal_text}
+                            <i 
+                                class="
+                                    fa-solid 
+                                    ${pledge_uncapped_rounded >= 200 ? 'fa-rocket' : 'fa-flag-checkered'}
+                                ">
+                            </i>
+                        </div>
                     </div>
                 </div>
             </div>
