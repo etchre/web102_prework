@@ -31,8 +31,8 @@ min widths
 
 /* screen breakpoints */
 /* sm */
-/*
-@media (min-width: 640px) {
+
+@media (min-width: 0px) {
     .header-adjusting-container {
         min-width: 640px;
     }
@@ -76,6 +76,39 @@ min widths
     .content-adjusting-container{
         max-width: 1280px;
     }
+
+    .money-percent-flavor {
+        font-size: 1rem;
+        top: 22px;
+    }
+
+    .money-stats-percent {
+        font-size: 4rem;
+        top: 0px;
+    }
+
+    .money-large {
+        font-size: 1.6rem;
+        top: -1px;
+    }
+
+    .money-small {
+        top: -6px;
+        font-size: 1.1rem;
+    }
+
+    .backers-display {
+        top: 25px;
+    }
+
+    .game-card-title {
+        margin-bottom: 0px;
+        font-size: 1.2rem;
+    }
+
+    .game-card {
+        grid-auto-rows: 176px 100px;
+    }
 }
 
 /* 2xl */
@@ -87,6 +120,39 @@ min widths
     
     .content-adjusting-container{
         max-width: 1536px;
+    }
+
+    .money-percent-flavor {
+        font-size: 1.3rem;
+        top: 19px;
+    }
+
+    .money-stats-percent {
+        font-size: 4.5rem;
+        top: -4px;
+    }
+
+    .money-large {
+        font-size: 1.8rem;
+        top: -1px;
+    }
+
+    .money-small {
+        font-size: 1.2rem;
+        top: -7px;
+    }
+
+    .backers-display {
+        top: 23px;
+    }
+
+    .game-card-title {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .game-card {
+        grid-auto-rows: 211.75px 100px;
     }
 }
 
@@ -297,7 +363,6 @@ a.anchor {
 .game-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 211.75px 100px;
     background-color: #FFFFFF;
     padding: 0;
     margin: 1%;
@@ -316,10 +381,8 @@ a.anchor {
 
 .game-card-title {
     font-weight: 800;
-    font-size: 1.5rem;
     padding: 0;
     margin-top: 0px;
-    margin-bottom: 10px;
 }
 
 .game-card-desc {
@@ -368,9 +431,7 @@ a.anchor {
 .money-stats-percent {
     margin: 0;
     position: relative;
-    top: -4px;
     font-weight: 700;
-    font-size: 4.5rem;
 }
 
 .money-percent-flavor-container {
@@ -383,8 +444,6 @@ a.anchor {
     margin: 0;
     position: relative;
     font-weight: 100;
-    font-size: 1.3rem;
-    top: 19px
 }
 
 .percent-goal-text {
@@ -412,17 +471,15 @@ a.anchor {
 .money-small {
     font-weight: 100;
     position: relative;
-    top: -7px;
 }
 
 .money-large {
+    position: relative;
     font-weight: 700;
-    font-size: 1.8rem;
 }
 
 .backers-display {
     position: relative;
-    top: 23px;
     background-color: #EEBF90;
     border-radius: 7px;
     padding: 2px 3px;
