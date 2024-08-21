@@ -88,9 +88,9 @@ function addGamesToPage(games) {
                 </div>
                 <div class='money-spread-stats'>
                     <div class='money-percent-container'>
-                        <p class='money-stats-percent'>
+                        <div class='money-stats-percent'>
                             ${Math.round(pledge_progress_uncapped*100)}%
-                        </p>
+                        </div>
                         <div class='money-percent-flavor-container'>
                             <p class='money-percent-flavor'>
                                 of goal reached

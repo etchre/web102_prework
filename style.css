@@ -34,11 +34,11 @@ min widths
 
 @media (min-width: 0px) {
     .header-adjusting-container {
-        min-width: 640px;
+        min-width: 620px;
     }
 
     .content-adjusting-container{
-        max-width: 640px;
+        max-width: 620px;
     }
 }
 
@@ -46,11 +46,86 @@ min widths
 
 @media (min-width: 768px) {
     .header-adjusting-container {
-        min-width: 768px;
+        min-width: 748px;
     }
 
     .content-adjusting-container{
-        max-width: 768px;
+        max-width: 748px;
+    }
+
+    .money-spread-stats {
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px solid aliceblue;
+    }
+
+    .money-percent-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .money-percent-flavor-container {
+        top: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 1px;
+        flex-grow: 1;
+    }
+
+    .money-percent-flavor {
+        font-size: 0.8rem;
+        top: 23px;
+    }
+
+    .money-stats-percent {
+        font-size: 2.3rem;
+        top: 11px;
+    }
+
+    .money-display-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;    
+    }
+
+    .money-display-container {
+        top: 2px;
+        flex-grow: 1;
+    }
+
+    .money-large {
+        font-size: 2rem;
+        top: -1px;
+    }
+
+    .money-small {
+        top: -13px;
+        font-size: 0.9rem;
+    }
+
+    .percent-goal-text {
+        top: 5px;
+        height: fit-content;
+    }
+
+    .backers-display {
+        top: 25px;
+        height: fit-content;
+    }
+
+    .game-card-title {
+        margin-bottom: 3px;
+        font-size: 1.4rem;
+    }
+
+    .game-card {
+        grid-auto-rows: 1fr 105px 180px;
+        grid-template-areas: 
+        "pic pic"
+        "money money"
+        "txt txt";
     }
 }
 
@@ -65,8 +140,23 @@ min widths
         max-width: 1004px;
     }
 
+    .money-spread-stats {
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 0px solid aliceblue;
+    }
+
+    .money-percent-container {
+        display: flex;
+        flex-direction: row;
+    }
+
     .money-percent-flavor-container {
         top: 0px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        justify-content: flex-start;
     }
 
     .money-percent-flavor {
@@ -75,12 +165,21 @@ min widths
     }
 
     .money-stats-percent {
-        font-size: 2.5rem;
-        top: 11px;
+        font-size: 2.85rem;
+        top: 9.5px;
+    }
+
+    .money-display-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;    
+        margin-right:5px;
     }
 
     .money-display-container {
         top: 18px;
+        flex-grow: 0;
     }
 
     .money-large {
@@ -126,8 +225,23 @@ min widths
         max-width: 1260px;
     }
 
+    .money-spread-stats {
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 0px solid aliceblue;
+    }
+    
+    .money-percent-container {
+        display: flex;
+        flex-direction: row;
+    }
+
     .money-percent-flavor-container {
         top: 0px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        justify-content: flex-start;
     }
 
     .money-percent-flavor {
@@ -141,7 +255,16 @@ min widths
     }
 
     .money-display-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;    
+        margin-right:5px;
+    }
+
+    .money-display-container {
         top: 15px;
+        flex-grow: 0;
     }
 
     .money-large {
@@ -186,8 +309,23 @@ min widths
         max-width: 1516px;
     }
 
+    .money-spread-stats {
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 0px solid aliceblue;
+    }
+
+    .money-percent-container {
+        display: flex;
+        flex-direction: row;
+    }
+
     .money-percent-flavor-container {
         top: 0px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        justify-content: flex-start;
     }
 
     .money-percent-flavor {
@@ -201,7 +339,16 @@ min widths
     }
 
     .money-display-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;    
+        margin-right:5px;
+    }
+    
+    .money-display-container {
         top: 15px;
+        flex-grow: 0;
     }
 
     .money-large {
@@ -234,7 +381,6 @@ min widths
         "money money";
     }
 }
-
 
 .content-root-container {
     display: flex;
@@ -475,7 +621,6 @@ a.anchor {
 .game-card-money-spread {
     grid-area: money;
     margin: 5px;
-
 }
 
 .money-spread-outline {
@@ -499,26 +644,13 @@ a.anchor {
 .money-spread-stats {
     position: relative;
     display: flex;
-    flex-direction: row;
     top: -45px;
-    justify-content: space-between;
-}
-
-.money-percent-container {
-    display: flex;
-    flex-direction: row;
 }
 
 .money-stats-percent {
     margin: 0;
     position: relative;
     font-weight: 700;
-}
-
-.money-percent-flavor-container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 5px;
 }
 
 .money-percent-flavor {
@@ -531,17 +663,11 @@ a.anchor {
     position: relative;
     margin-top: 3px;
     font-weight: 200;
-    top: -7px;
     background-color: rgba(131, 215, 131, 0.782);
     border-radius: 7px;
     padding: 2px 3px;
     color: white;
     text-align: center;
-}
-
-.money-display-container {
-    position: relative;    
-    margin-right:5px;
 }
 
 .money-display {
