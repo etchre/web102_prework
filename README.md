@@ -29,7 +29,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/XjyhFWg' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Kap  
@@ -40,7 +40,11 @@ GIF created with Kap
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Building the website and going through the steps was pretty straight-forward, and I arrived at the website in its basic form pretty quickly. I started thinking about optional features and I began working on the easy stuff, like adding a simple nav-bar and a search-bar. It took a bit of reading to get the search-bar looking just how I wanted since I wanted to have it pop out when you hover over it. I'd never worked with CSS Animations much, but I then figured out that all I had to do was turn on transitions. After doing a couple extra hours of work, I figured I could stop there, but I wasn't satisfied with how the website looked. I decided to challenge myself and try my hand at responsive design, but it was way more work than I expected.
+
+I hadn't really worked with pure HTML/CSS/JS to make a dynamic type website so it was a learning experience for me, figuring out how to apply styles dynamically and using media queries to change said styles depending on the size of the window. I think the roughest part of my attempt at responsive design was that I went in totally blind, so I ended up with a huge stylesheet. It didn't really help that I kept working in the same file, and I probably should have made multiple files for each section of the website in order to have better kept my sanity. I also had made the mistake of working on the biggest layout first, and then working my way down. I realized later on that it would've been way easier to start mobile first, and it culminated in a lot of repetition in my stylesheet.
+
+All in all after I finished making layouts for a good amount of screen sizes, I think it turned out well. It's not perfect, and there's definitely some layouts that bug me, but I like what I ended up with. I ended up giving up on adding a visual flourish (variable font sizes depending on how much money was raised), but it was hard to do and it would've made doing responsive design a nightmare. In fact, trying to implement responsive design (which was pretty new to me) taught me a lot, and I figured out a lot of do's and dont's for future projects.
 
 ## License
 
