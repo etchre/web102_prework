@@ -30,7 +30,8 @@ The following **optional** features are implemented:
 Here's a walkthrough of implemented features:
 
 <img src='./web102-small.gif' />
-GIF created with Kap  
+
+GIF created with Kap.
 
 P.S. The gif was too high quality so I had to compress it so it would show up in github. If you want to view this gif in higher quality, here is an [imgur link](https://imgur.com/a/web-102-demo-XjyhFWg).
 
