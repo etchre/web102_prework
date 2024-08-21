@@ -29,7 +29,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://imgur.com/FjcZdM2.gif' />
+<img src='./web102-small.gif' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Kap  
