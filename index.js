@@ -318,6 +318,7 @@ const [firstGame, secondGame, ...rest] = sortedGames;
 // create a new element to hold the name of the top pledge game, then append it to the correct element
 let topPledgeDiv = document.createElement('p');
 topPledgeDiv.textContent = `${firstGame.name}`;
+topPledgeDiv.classList.add('top-pledge-div');
 firstGameContainer.append(topPledgeDiv);
 
 // do the same for the runner up item

@@ -4,7 +4,7 @@ Submitted by: **Ethan Reed**
 
 **Sea Monster Crowdfunding Website** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **10** hours spent in total
+Time spent: **28** hours spent in total
 
 ## Required Features
 
@@ -18,8 +18,12 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [x] Created a navigation bar at the top to quickly navigate to specific sections of the page
-* [ ] Overhaul game card to display more information (like total amount raised and the goal)
-* [ ] Create a search bar to search for a specific game
+* [x] Overhaul game card to display more information (like total amount raised and the goal)
+* [x] Create a search bar to search for a specific game
+* [x] Implemented responsive design (multiple layouts for different screen sizes)
+* [x] Changed color scheme to a ligher one
+* [x] Changed font to 'M PLUS 1'
+* [ ] Overhaul stats card section to fit in with the look of the game cards
 
 ## Video Walkthrough
 
